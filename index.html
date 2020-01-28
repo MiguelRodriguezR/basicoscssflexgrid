@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/style.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -25,13 +26,134 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Basicos</h1>
+					<h3>de css, flexbox y grid</h3>
+					<p>
+						<small> Por: <a href="https://www.facebook.com/miguel.a.rodriguez.ro">Miguel Rodriguez</a></a></small>
+					</p>
+				</section>
+				<section>
+					<div class="horizontal">
+						<h4 class="">LOADING</h4>
+						<h4 span class="fragment highlight-current-green">RENDERING</h4>
+						<h4 class="">PAINTING</h4>
+						<h4 class="">DISPLAYING</h4>
+					</div>
+
+				</section>
+				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+					<h3>RENDERING</h3>
+					<ul>
+						<li>Une las reglas de estilo con los elementos</li>
+						<li>Calcula los valores de las animaciones</li>
+						<li>Calcula geometrias</li>
+						<li>Ancho, alto, posicion, color, etc...</li>
+					</ul>
+				</section>
+				<section data-background-iframe="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" data-background-interactive>
+					<div class="fragment fade-in-then-out cuadro-info derecha">
+						<h2>FLEX</h2>
+						<p>La idea principal detrás del diseño flexible es darle al contenedor la capacidad de alterar el ancho / alto de sus artículos (y el orden) para llenar mejor el espacio disponible (principalmente para acomodar todo tipo de dispositivos y tamaños de pantalla). Un contenedor flexible expande los elementos para llenar el espacio libre disponible o los reduce para evitar el desbordamiento.</p>
+					</div>
+					<div class="fragment fade-in-then-out"></div>
+				</section>
+				<section>
+					<h2>USO</h2>
+					<p>Para decirle a un contenedor que sus items se comportaran en <strong>FLEX</strong> necesitamos implementar el siguiente código:</p>
+					<pre><code class="hljs" data-trim data-line-numbers="2">
+.container {
+  display: flex; /* or inline-flex */
+}
+					</code></pre>
+				</section>
+				<section data-background-iframe="https://codepen.io/osublake/full/dMLQJr" data-background-interactive>
+					<div class="fragment fade-in-then-out cuadro-info derecha">
+						<h2>flex-direction</h2>
+						<p>Esta propiedad establece el eje principal, definiendo así la dirección en la que se colocan los elementos en el contenedor . Ej:</p>
+						<pre><code class="hljs" data-trim data-line-numbers="3">
+.container {
+   display: flex; /* or inline-flex */
+   flex-direction: row
+}
+					</code></pre>
+					</div>
+					<div class="fragment fade-in-then-out cuadro-info izquierda">
+						<h2>flex-grow</h2>
+						<p>Esto define la capacidad de un elemento flexible para crecer si es necesario. Acepta un valor en unidades que sirve como proporción. Ej:</p>
+						<pre><code class="hljs" data-trim data-line-numbers="2">
+.item {
+  flex-grow: 10; /* default 0 */
+}
+					</code></pre>
+					</div>
+					<div class="fragment fade-in-then-out cuadro-info derecha">
+						<h2>flex-wrap</h2>
+						<p>Por defecto, todos los elementos flexibles intentarán encajar en una línea. Puede cambiar eso y permitir que los elementos se ajusten según sea necesario con esta propiedad.</p>
+						<pre><code class="hljs" data-trim data-line-numbers="2">
+.container{
+  flex-wrap: wrap;
+}
+					</code></pre>
+					</div>
+					<div class="fragment fade-in-then-out cuadro-info derecha">
+						<h2>align-items</h2>
+						<p>Esto define el comportamiento predeterminado de cómo se distribuyen los elementos flexibles a lo largo del eje transversal en la línea actual.</p>
+						<pre><code class="hljs" data-trim data-line-numbers="2">
+.container {
+  align-items: flex-start;
+}
+					</code></pre>
+					</div>
+					<div class="fragment fade-in-then-out cuadro-info derecha">
+						<h2>justify-content</h2>
+						<p>Esto define la alineación a lo largo del eje principal. Ayuda a distribuir las sobras de espacio libre extra cuando todos los elementos han alcanzado su tamaño máximo.</p>
+						<pre><code class="hljs" data-trim data-line-numbers="2">
+.container {
+  justify-content:  space-around;
+}
+					</code></pre>
+					</div>
+					<div class="fragment fade-in-then-out"></div>
+				</section>
+				<section>
+					<h3>Enlaces</h3>
+					<ul>
+						<li>
+							<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Guide to Flexbox</a>
+						</li>
+						<li>
+							<a href="https://codepen.io/osublake/full/dMLQJr">Playground</a>
+						</li>
+					</ul>
+				</section>
+				<section data-background-iframe="https://css-tricks.com/snippets/css/complete-guide-grid/" data-background-interactive>
+					<div class="fragment fade-in-then-out cuadro-info derecha">
+						<h2>GRID</h2>
+						<p>CSS Grid-Layout es el sistema de diseño más potente disponible en CSS. Es un sistema bidimensional, lo que significa que puede manejar tanto columnas como filas, a diferencia de flexbox, que es en gran medida un sistema unidimensional. Trabaja con el Diseño de cuadrícula aplicando reglas CSS tanto a un elemento primario como a los elementos secundarios o hijos de ese elemento.</p>
+					</div>
+					<div class="fragment fade-in-then-out"></div>
+				</section>
+
+				<section>
+					<h3>Enlaces</h3>
+					<ul>
+						<li>
+							<a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Guide to Grid</a>
+						</li>
+						<li>
+							<a href="https://cssgridgarden.com/#es">GRID GARDEN</a>
+						</li>
+						<li>
+							<a href="https://mozilladevelopers.github.io/playground/css-grid/03-firefox-devtools">INTRODUCTION TO CSS GRID LAYOUT</a>
+						</li>
+					</ul>
+				</section>
 			</div>
 		</div>
 
 		<script src="js/reveal.js"></script>
-
+c
 		<script>
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration
